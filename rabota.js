@@ -1,16 +1,25 @@
+function askLogin(){
 let truelogin = "login";
-let truepassword = "password";
 let login = prompt("Введите свой логин");
-if (login != truelogin) {
-    alert("Вы ввели неправильный логин")
-} else if (login == truelogin) {
-    let password = prompt("Введите свой пароль");
-if (password == truepassword) {
-    alert("Добро пожаловать");
-} else {
-    alert("Неправильный пароль");
-    }
+if (login == truelogin){
+    alert('Здравствуйте логин!')
+} else{
+    alert('Вы ввели не правильный логин, по пробуйте ещё раз!')
+    return askLogin()
+  }
+} 
+askLogin()
+function askPassword(){
+let truepassword = "password";
+let password = prompt("Введите свой пароль");
+if (password == truepassword){
+    alert('Добро пожаловать!')
+} else{
+    alert('Вы ввели не правильный пароль, по пробуйте ещё раз!')
+    return askPassword()
+  }
 }
+askPassword()
 
 let servers = {
     server1:{
